@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/main.css" />
   
 </head>
@@ -12,12 +13,14 @@
   
   <%- include('./_partials/nav.ejs')%>
 
-  <form action="/db/create-ad" method="POST">
+  <form action="/db/create-ad" method="POST" onsubmit="return validateForm()" name="myForm">
     <input type="text" name="title" placeholder="title">
-    <input type="text" name="price" placeholder="9.99">
-    <textarea name="description" placeholder="Message..."></textarea>
-    <input type="radio" name="condition" value="New">New<br>
-    <input type="radio" name="condition" value="Used">Used<br>
+    <input type="text" name="price" placeholder="9.99" id="price">
+    <textarea name="description" placeholder="Description..."></textarea>
+    <div class="radio">
+      <input type="radio" name="condition" value="New">New<br>
+      <input type="radio" name="condition" value="Used">Used<br>
+    </div>
     
     <button type="submit">Send</button>
     <button type="reset">Reset</button>

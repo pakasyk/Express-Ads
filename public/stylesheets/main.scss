@@ -4,7 +4,18 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
+    font-family: 'Playfair Display', serif;
+    
 }
+a:visited { 
+    color: #000;
+}
+a:active {
+    color: #000;
+}
+a:link {
+    color: #000;
+  }
 
 html, body {
     width: 100%;
@@ -14,11 +25,12 @@ html, body {
 header {
     height: 100px;
     width: 100%;
-    background-color: #dadada;
+    background-color: #efefef;
     display: flex;
     align-items: center;
     flex-flow: row wrap;
     padding: 10px 20px;
+    box-shadow: 0px 2px 3px #dadada;
 
     h1 {
         display: block;
@@ -36,6 +48,15 @@ header {
             li {
                 display: inline;
                 margin-left: 20px;
+                transition: border-bottom .2s;
+
+                &:hover {
+                    border-bottom: 2px solid black;
+                }
+
+                a {
+                    font-size: 18px;
+                }
             }
         }
     }
@@ -49,30 +70,84 @@ header {
     justify-content: space-between;
     flex-flow: row wrap;
 
-    .ad {
+    a {
         flex: 0 32%;
-        min-width: 200px;
+    }
+    .ad {
+        
+        width: 100%;
+        min-width: 200px;;
         min-height: 200px;
         margin-top: 20px;
-        border-radius: 4px;
-        background-color: grey;
-        padding: 10px 10px 5px 20px;
+        border-radius: 2px;
+        background-color: #fff;
+        padding: 10px 10px 20px 20px;
+        border: 1px solid #dadada;
+        transition: all .3s;
+        display: flex;
+        flex-flow: column nowrap;
+
+        &:hover {
+            background-color: #f3f3f3;
+            box-shadow: 1px 1px 3px #dadada;
+        }
+
+        h3 {
+            margin-bottom: 10px;
+        }
+
+        h4 {
+            margin-top: auto;
+        }
     }
 }
 
 .ad-details {
     display: flex;
-    width: 90%;
+    width: 80%;
     margin: 10px auto;
+    align-items: flex-start;
     
     .image {
-        width: 100%;
+        
+        height: 300px;
         flex: 1;
-        background-color: grey;
+        background-image: linear-gradient(to bottom right, #f9f9f9, #dadada);
     }
 
     .info {
         flex: 1;
         width: 100%;
+        padding: 20px 100px;
+
+        h1 {
+            margin-top: 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+    }
+}
+
+form {
+    margin: 20px auto;
+    display: flex;
+    width: 60%;
+    flex-flow: column nowrap;
+    
+
+    input, textarea, button {
+        width: 100%;
+        font-size: 16px;
+        padding: 5px;  
+        margin-bottom: 10px;      
+    }
+
+    .radio {
+        
+        input[type="radio"] {
+           width: 25px;
+            
+        }    
+        
     }
 }

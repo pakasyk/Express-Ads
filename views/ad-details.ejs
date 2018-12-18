@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/main.css" />
   
 </head>
@@ -15,7 +16,10 @@
   <div class="ad-details">
       <div class="image"></div>
       <div class="info">
-          <h1><%= title %></h1>
+          <h1><%= ad.title %></h1>
+          <p><%= ad.description %></p>
+          <p><%= ad.condition %></p>
+          <h3><span style="font-weight: normal">Kaina:</span><%= ad.price %></h3>
       </div>
   </div>
   

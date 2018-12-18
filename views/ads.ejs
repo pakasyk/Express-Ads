@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title><%= title %></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
   <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/main.css" />
   
 </head>
@@ -17,10 +18,10 @@
     <% for (let i = 0; i < ad.length; i++){ %>
       <a href="/ad-details/<%= i %>">
         <div class="ad">
-          <h2><%= ad[i].title %></h2>
+          <h3><%= ad[i].title %></h3>
           <p><%= ad[i].description %></p>
-          <p><%= ad[i].price %></p>
           <p><%= ad[i].condition %></p>      
+          <h4><span style="font-weight: normal; font-size: 14px;">Kaina: </span><%= ad[i].price %>&euro;</h4>
         </div>
       </a>
       
