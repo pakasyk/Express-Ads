@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/main.css" />
+  
+</head>
+<body> 
+
+  <%- include('./_partials/nav.ejs')%>
+
+  <div class="ads-container">
+
+    <% for (let i = 0; i < ad.length; i++){ %>
+      <a href="/ad-details/<%= i %>">
+        <div class="ad">
+          <h2><%= ad[i].title %></h2>
+          <p><%= ad[i].description %></p>
+          <p><%= ad[i].price %></p>
+          <p><%= ad[i].condition %></p>      
+        </div>
+      </a>
+      
+    <% } %>
+
+  </div>
+  <script src="./javascripts/main.js"></script>
+</body>
+</html>

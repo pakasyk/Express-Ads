@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="./stylesheets/main.css" />
+  
+</head>
+<body>
+  
+  <%- include('./_partials/nav.ejs')%>
+
+  <form action="/db/create-ad" method="POST">
+    <input type="text" name="title" placeholder="title">
+    <input type="text" name="price" placeholder="9.99">
+    <textarea name="description" placeholder="Message..."></textarea>
+    <input type="radio" name="condition" value="New">New<br>
+    <input type="radio" name="condition" value="Used">Used<br>
+    
+    <button type="submit">Send</button>
+    <button type="reset">Reset</button>
+  </form>
+  
+
+  <script src="./javascripts/main.js"></script>
+</body>
+</html>
